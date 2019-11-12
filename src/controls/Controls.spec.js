@@ -55,9 +55,3 @@ test('buttons to toggle are provided ', () =>{
     expect(/lock gate/i);
 });
 
-test('closed toggle button is disabled if the gate is locked', () =>{
-    const closedButtonMock = jest.fn();
-
-    const {getByText} = render(<Controls toggleClosed={closedButtonMock} closed={true} locked={true} />);
-    expect(getByText(/open gate/i)).toBeDisabled();
-});
